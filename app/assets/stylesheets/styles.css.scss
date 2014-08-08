@@ -1,0 +1,81 @@
+$primary_color: #AAA;
+
+body {
+  background-color: $primary_color;
+  font: {
+    family: Verdana, Helvetica, Arial;
+    size: 14px;
+  }
+}
+
+a {
+  color: #0000FF;
+  img {
+    border: none;
+  }
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 75%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+#content {
+  clear: both;
+  padding-top: 20px;
+}
+
+
+
+/* my attempt to be cleaned up*/
+
+h1 {
+  font-style: italic;
+}
+p {
+  color: green;
+}
+
+/* global-links */
+a:link {
+  text-decoration: none;
+  color: blue;
+}
+a:visited {
+  color: red;
+}
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+.flash {
+  text-decoration: underline;
+}
+
+
+/* ul articles */
+
+#articles {
+}
+
+.article_title {
+  color: red;
+}
+
+.new_article {
+  color: blue;
+}
+
+#comment {
+  
+}
