@@ -34,6 +34,8 @@ gem 'spring',        group: :development
 
 gem "paperclip"
 
+gem "sorcery"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
