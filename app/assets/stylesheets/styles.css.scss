@@ -1,11 +1,21 @@
-$primary_color: #AAA;
+$primary_color: #ff524f;
 
 body {
   background-color: $primary_color;
   font: {
-    family: Verdana, Helvetica, Arial;
-    size: 14px;
+    family: Helvetica, Arial, sans-serif;
+    size: 20px;
   }
+}
+
+ul { 
+  list-style: none;
+  padding: none;
+
+}
+ul li {
+  padding: 1em;
+
 }
 
 a {
@@ -26,7 +36,7 @@ a {
   margin: 0 auto;
   background: #fff;
   padding: 20px 40px;
-  border: solid 1px black;
+  border: none;
   margin-top: 20px;
 }
 
@@ -36,46 +46,3 @@ a {
 }
 
 
-
-/* my attempt to be cleaned up*/
-
-h1 {
-  font-style: italic;
-}
-p {
-  color: green;
-}
-
-/* global-links */
-a:link {
-  text-decoration: none;
-  color: blue;
-}
-a:visited {
-  color: red;
-}
-a:hover {
-  text-decoration: underline;
-  color: blue;
-}
-.flash {
-  text-decoration: underline;
-}
-
-
-/* ul articles */
-
-#articles {
-}
-
-.article_title {
-  color: red;
-}
-
-.new_article {
-  color: blue;
-}
-
-#comment {
-  
-}
