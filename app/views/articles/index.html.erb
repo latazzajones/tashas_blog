@@ -1,5 +1,4 @@
-<body>
-<h1>Man Eating Elephant</h1>
+<%= render 'shared/header' %>
 <ul id="articles">
   <% @articles.each do |article| %>
     <li>
@@ -11,4 +10,3 @@
 <% if logged_in? %>
 <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
 <% end %>
-</body>

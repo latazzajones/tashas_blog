@@ -1,10 +1,28 @@
-$primary_color: #ff524f;
+$primary_color: #aa006d;
+$text_color: #e55008;
 
 body {
   background-color: $primary_color;
+  background-opacity: 60;
+  color: $text_color;
   font: {
     family: Helvetica, Arial, sans-serif;
     size: 20px;
+    color: #e55008;
+  }
+}
+
+p {
+  color: #000;
+}
+
+#header {
+  a {
+  text-decoration: none;
+  color: $text_color;
+  }
+  a:hover {
+    color: red;
   }
 }
 
@@ -15,15 +33,20 @@ ul {
 }
 ul li {
   padding: 1em;
-
 }
 
 a {
-  color: #0000FF;
+  color: $text_color;
+  text-decoration: none;
   img {
     border: none;
   }
 }
+
+a:hover {
+    text-decoration: underline;
+    font-style: bold;
+  }
 
 .clear {
   clear: both;
@@ -34,7 +57,7 @@ a {
 #container {
   width: 75%;
   margin: 0 auto;
-  background: #fff;
+  background: $primary_color;
   padding: 20px 40px;
   border: none;
   margin-top: 20px;
@@ -44,5 +67,7 @@ a {
   clear: both;
   padding-top: 20px;
 }
+
+
 
 
