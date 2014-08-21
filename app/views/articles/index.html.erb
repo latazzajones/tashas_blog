@@ -3,6 +3,7 @@
   <% @articles.each do |article| %>
     <li>
      <%= link_to article.title, article_path(article), class: 'article_title' %>
+     <p id="body_preview"><%= raw article.body[0 .. 150] %> ... </p>
     </li>
   <% end %>
 </ul>
