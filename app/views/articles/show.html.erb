@@ -1,10 +1,10 @@
 <%= render 'shared/header' %>
 <h1><%= @article.title %></h1>
 <p>
-	<h4>Tags:</h4>
-	<% @article.tags.each do |tag| %>
-		<%= link_to tag.name, tag_path(tag) %>
-	<% end %>
+	
+	
+<!-- 	<h3 id="tags">Tags: <% @article.tags.each do |tag| %><%= link_to tag.name, tag_path(tag)%></h3>
+	<% end %> -->
 </p>
 
 <p>
@@ -14,12 +14,12 @@
 </p>
 
 <p><%= raw @article.body %></p>
+<!-- <%= link_to "<< Back to Articles List", articles_path, class: "admin" %> -->
 
-<% if logged_in? %>
+<% if logged_in?%>
 
-<%= link_to "<< Back to Articles List", articles_path %><br/>
-<%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Do you really want to delete this article?"} %><br/>
-<%= link_to "edit", edit_article_path(@article) %>
+<%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Do you really want to delete this article?"}, class: "admin" %><br/>
+<%= link_to "edit", edit_article_path(@article), class: "admin" %>
 
 <% end %>
 

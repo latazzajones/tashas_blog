@@ -8,7 +8,7 @@ body {
   color: $gray_text;
   font: {
     family: 'Raleway', sans-serif;
-    size: 25px;
+    size: 20px;
     color: #e55008;
   }
 }
@@ -30,17 +30,28 @@ nav {
 p {
   color: none;
   padding-bottom: none;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 h1 {
   color: $orange_text;
-  padding-bottom: 0;
-  margin-bottom: -30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 h4 {
   margin: 0em;
+}
+
+#tags {
+  font-size: 15px;
+  float: left;
 }
 
 a:hover {
@@ -73,6 +84,10 @@ ul li {
   padding: 1em;
 }
 
+ul .article_title {
+  font-size: 30px;
+}
+
 a {
   color: $orange_text;
   text-decoration: none;
@@ -100,6 +115,12 @@ a {
   clear: both;
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.admin {
+  font-size: 15px;
+  float: right;
+  padding-top: 0px;
 }
 
 
