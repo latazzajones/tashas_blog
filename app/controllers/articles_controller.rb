@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@articles = Article.all
+		@articles = Article.all.sort_by { |created_at| created_at }.reverse 
 	end
 
 	def show
