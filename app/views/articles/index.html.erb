@@ -3,7 +3,7 @@
   <% @articles.each do |article| %>
     <li>
      <%= link_to article.title, article_path(article), class: 'article_title' %>
-     <p id="body_preview"><%= raw article.body%> ... </p>
+     <p id="body_preview"><%= raw article.body.split("\n").first %> ... </p>
     </li>
   <% end %>
 </ul>
