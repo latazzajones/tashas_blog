@@ -36,8 +36,8 @@ p {
 h1 {
   color: $orange_text;
   padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   font-size: 30px;
 }
 
@@ -86,6 +86,13 @@ ul li {
 
 ul .article_title {
   font-size: 30px;
+}
+
+#date {
+  color: $orange_text;
+  font-size: 15px;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 a {

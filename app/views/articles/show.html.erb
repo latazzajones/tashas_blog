@@ -1,6 +1,6 @@
 <%= render 'shared/header' %>
 <h1><%= @article.title %></h1>
-<p>
+<p id="date"><%= @article.created_at.strftime("%e %B, %Y") %></p>
 	
 	
 <!-- 	<h3 id="tags">Tags: <% @article.tags.each do |tag| %><%= link_to tag.name, tag_path(tag)%></h3>
