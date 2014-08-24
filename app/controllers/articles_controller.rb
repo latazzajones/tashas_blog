@@ -4,7 +4,8 @@ class ArticlesController < ApplicationController
 	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
 	def index
-		@articles = Article.all.sort_by { |created_at| created_at }.reverse 
+		@articles = Article.all.sort_by { |created_at| created_at }.reverse
+		@articles = Article.paginate(:page => params[:page], :per_page => 3)
 	end
 
 	def show

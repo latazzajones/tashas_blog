@@ -36,6 +36,8 @@ gem "paperclip"
 
 gem "sorcery"
 
+gem 'will_paginate', '~> 3.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
