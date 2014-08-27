@@ -38,6 +38,8 @@ gem "sorcery"
 
 gem 'will_paginate', '~> 3.0'
 
+gem 'tinymce-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

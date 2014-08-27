@@ -1,3 +1,4 @@
+<%= tinymce %>
 <%= render 'shared/header' %>
 <h1><%= @article.title %></h1>
 <p id="date"><%= @article.created_at.strftime("%e %B, %Y") %></p>
@@ -19,7 +20,7 @@
 <% if logged_in?%>
 
 <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Do you really want to delete this article?"}, class: "admin" %><br/>
-<%= link_to "edit", edit_article_path(@article), class: "admin" %>
+<%= link_to "edit", edit_article_path(@article), class: "admin", 'data-no-turbolink' => true %>
 
 <% end %>
 
