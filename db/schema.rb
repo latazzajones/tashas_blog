@@ -38,16 +38,6 @@ ActiveRecord::Schema.define(version: 20140809000030) do
 
   add_index "authors", ["email"], name: "index_authors_on_email", unique: true, using: :btree
 
-  create_table "comments", force: true do |t|
-    t.string   "author_name"
-    t.text     "body"
-    t.integer  "article_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree
-
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"
     t.integer  "article_id"
