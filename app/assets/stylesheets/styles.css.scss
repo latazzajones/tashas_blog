@@ -147,7 +147,7 @@ a {
 .pagination {
   background: white;
   border: 0px;
-  text-align: center;
+  text-align: right;
   padding: .5em;
   cursor: default; }
   .pagination .current {
@@ -159,6 +159,7 @@ a {
     width: 1em;
     height: 1em;
     line-height: .85;
+    text-align: center;
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
