@@ -1,6 +1,6 @@
 $fuchsia_text: #aa006d;
 $orange_text: #e55008;
-$gray_text: #776f6f;
+$gray_text: #776f6f; 
 
 body {
   background-color: none;
@@ -37,8 +37,11 @@ h1 {
   color: $orange_text;
   padding-top: 10px;
   padding-bottom: 0px;
+  padding-left: 0;
   margin-bottom: 5px;
   font-size: 30px;
+  font-weight: normal;
+
 }
 
 h3 {
@@ -78,13 +81,19 @@ a:hover {
 ul { 
   list-style: none;
   padding: none;
-
+  li {
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
 }
-ul li {
-  padding: 1em;
+
+#articles {
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-left: .25em;
 }
 
-ul .article_title {
+.article_title {
   font-size: 30px;
 }
 
@@ -110,7 +119,7 @@ a {
 }
 
 #container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   background: none;
   padding: 20px 40px;
