@@ -32,6 +32,7 @@ gem 'spring',        group: :development
 # Use unicorn as the app server
 # gem 'unicorn'
 
+gem 'carrierwave'
 gem "paperclip"
 
 gem "sorcery"

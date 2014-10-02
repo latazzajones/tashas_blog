@@ -1,4 +1,5 @@
 class Article < ActiveRecord::Base
+	mount_uploader :image, ImageUploader, :mount_on => :image
 	default_scope -> { order('created_at DESC') }
 	has_many :comments
 	has_many :taggings
