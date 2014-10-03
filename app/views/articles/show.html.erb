@@ -9,9 +9,9 @@
 </p>
 
 <p>
-	<% if @article.image.exists? %>
-		<%= image_tag @article.image.url %><br />
-	<% end %>
+    <% if @article.image_url %>
+     <%= image_tag @article.image.url %><br />
+    <% end %>
 </p>
 
 <p><%= raw @article.body %></p>
