@@ -40,6 +40,8 @@ gem 'will_paginate', '~> 3.0'
 
 gem 'tinymce-rails'
 
+gem 'figaro'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

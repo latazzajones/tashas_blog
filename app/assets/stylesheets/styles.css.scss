@@ -1,11 +1,11 @@
-$fuchsia_text: #aa006d;
-$orange_text: #e55008;
-$gray_text: #776f6f; 
+$fuchsia-text: #aa006d;
+$orange-text: #e55008;
+$gray-text: #776f6f;
 
+// ***** base *****
 body {
   background-color: none;
-  background-opacity: 60;
-  color: $gray_text;
+  color: $gray-text;
   font: {
     family: 'Quattrocento', sans-serif;
     size: 20px;
@@ -13,35 +13,20 @@ body {
   }
 }
 
-li {
-  margin-top: -10px;
-  margin-bottom: 0px;
-}
-
-#body_preview {
-  font-size: 20px;
-  margin-top: 5px;
-}
-
-nav {
-  float: right;
-}
-
 p {
   color: none;
-  padding-bottom: none;
   margin-top: 20px;
+  padding-bottom: none;
 }
 
 h1 {
-  color: $orange_text;
-  padding-top: 10px;
-  padding-bottom: 0px;
-  padding-left: 0;
-  margin-bottom: 5px;
+  color: $orange-text;
   font-size: 30px;
   font-weight: normal;
-
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-bottom: 5px;
 }
 
 h3 {
@@ -49,41 +34,56 @@ h3 {
 }
 
 h4 {
-  margin: 0em;
+  margin: 0;
 }
 
-#tags {
-  font-size: 15px;
-  float: left;
+ul {
+  list-style: none;
+  padding: none;
+
+  li {
+    margin-top: -10px;
+    margin-bottom: 0;
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
+}
+
+nav {
+  float: right;
+}
+
+a {
+  color: $orange-text;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
-    font-style: bold;
-  }
+  font-style: bold;
+  text-decoration: underline;
+}
+
+// ***** modular *****
+#body_preview {
+  font-size: 20px;
+  margin-top: 5px;
+}
 
 #header {
   a {
-  font-family: 'Istok Web', sans-serif;
-  text-decoration: none;
-  color: $fuchsia_text;
-  font-size: 80px;
-  padding-top: 0px;
-  }
+    font-family: 'Istok Web', sans-serif;
+    text-decoration: none;
+    color: $fuchsia-text;
+    font-size: 80px;
+    padding-top: 0;
+    }
+
   a:hover {
-    color: $orange_text;
+    color: $orange-text;
   }
+
   h1 {
     margin-top: -300px;
-  }
-}
-
-ul { 
-  list-style: none;
-  padding: none;
-  li {
-    padding-top: .5em;
-    padding-bottom: .5em;
   }
 }
 
@@ -98,18 +98,10 @@ ul {
 }
 
 #date {
-  color: $orange_text;
+  color: $orange-text;
   font-size: 15px;
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-a {
-  color: $orange_text;
-  text-decoration: none;
-  img {
-    border: none;
-  }
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .clear {
@@ -129,32 +121,32 @@ a {
 
 #content {
   clear: both;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .admin {
   font-size: 15px;
   float: right;
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 ::selection {
   color: white;
   background: #776f6f;
 }
-/*pagination*/
+
 .pagination {
   background: white;
-  border: 0px;
+  border: 0;
   text-align: right;
   padding: .5em;
-  cursor: default; }
+  cursor: default;
   .pagination .current {
-    color: $fuchsia_text;
+    color: $fuchsia-text;
     font-style: normal;
     font-weight: bold;
-    background-color: $orange_text;
+    background-color: $orange-text;
     display: inline-block;
     width: 1em;
     height: 1em;
@@ -166,6 +158,8 @@ a {
     /*text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; */}
   .pagination a {
     text-decoration: none;
-    color: $orange_text; }
-    .pagination a:hover, .pagination a:focus {
-      text-decoration: underline; }
+    color: $orange-text;}
+
+.pagination a:hover, .pagination a:focus {
+  text-decoration: underline; }
+}
