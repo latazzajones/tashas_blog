@@ -11,12 +11,14 @@
   </head>
 
 <body>
-	<p class="flash">
+<%= render 'shared/nav' %>
+	<div id="container">
+  <p class="flash">
 		<%= flash.notice %>
 	</p>
-	<div id="container">
-		<div id="content">
+  <%= render 'shared/header' %>
 			<%= yield %>
+
 			<hr>
 			<h6>
 				<% if logged_in? %>
@@ -26,7 +28,6 @@
 					<%= link_to "login", login_path %>
 				<% end %>
 			</h6>
-		</div>
-	</div>
+      </div>
 </body>
 </html>

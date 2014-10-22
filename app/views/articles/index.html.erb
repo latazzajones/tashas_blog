@@ -1,17 +1,16 @@
-<%= render 'shared/header' %>
-<ul id="articles">
-  
-  <% @articles.each do |article| %>
-    <li>
-     <%= link_to article.title, article_path(article), class: 'article_title' %>
-     <p id="body_preview"><%= raw article.body.split(". ").first %> ...</p>
-    </li>
+  <ul id="articles">
+    <% @articles.each do |article| %>
+      <li>
+       <%= link_to article.title, article_path(article), class: 'article_title' %>
+       <p id="body_preview"><%= raw article.body.split(". ").first %> ...</p>
+      </li>
+    <% end %>
+    </ul>
+
+  <div class="pagination">
+      <%= will_paginate @articles %>
+  </div>
+
+  <% if logged_in? %>
+  <%= link_to "Create a New Article", new_article_path, class: "new_article" %>
   <% end %>
-
-<div class="pagination">
-    <%= will_paginate @articles %>
-</div>
-
-<% if logged_in? %>
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
-<% end %>

@@ -1,9 +1,8 @@
 <%= tinymce %>
-<%= render 'shared/header' %>
 <h1 class="article_title"><%= @article.title %></h1>
 <p id="date"><%= @article.created_at.strftime("%e %B, %Y") %></p>
-	
-	
+
+
 <!-- 	<h3 id="tags">Tags: <% @article.tags.each do |tag| %><%= link_to tag.name, tag_path(tag)%></h3>
 	<% end %> -->
 </p>
@@ -38,4 +37,3 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    
