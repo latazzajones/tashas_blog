@@ -1,5 +1,5 @@
 $fuchsia-text: #aa006d;
-$orange-text: #e55008;
+$orange-text: #e1c336;
 $gray-text: #776f6f;
 
 // ***** base *****
@@ -9,7 +9,6 @@ body {
   margin: 0;
   font: {
     family: 'Quattrocento', sans-serif;
-    size: 20px;
     color: #e55008;
   }
 }
@@ -21,13 +20,13 @@ p {
 }
 
 h1 {
-  // color: $orange-text;
-  // font-size: 30px;
-  // font-weight: normal;
-  // padding-top: 10px;
-  // padding-bottom: 0;
-  // padding-left: 0;
-  // margin-bottom: 5px;
+  color: $orange-text;
+  font-size: 30px;
+  font-weight: normal;
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-bottom: 5px;
 }
 
 h3 {
@@ -54,6 +53,7 @@ nav {
   background-color: $gray-text;
   position: fixed;
   color: #fff;
+  font-size: 1.2em;
   top: 0;
   height: 4.5em;
   width: 100%;
@@ -66,7 +66,7 @@ nav {
     text-align: right;
     div {
       height: 1.5em;
-      width: 8em;
+      width: 90%;
       padding-right: 2em;
       }
     .teal {
@@ -82,7 +82,7 @@ nav {
 }
 
 a {
-  color: $orange-text;
+  color: $fuchsia-text;
   text-decoration: none;
 }
 
@@ -100,12 +100,18 @@ a:hover {
 #header {
   position: absolute;
   float: left;
-  margin-top: 0;
-  font-size: 90%;
+  margin-top: 1em;
+  margin-left: 1em;
+  padding: 3px;
+  font-size: 95%;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $orange-text;
+  font-style: 'Istok Web', sans-serif;
   a {
-    font-family: 'Istok Web', sans-serif;
     text-decoration: none;
-    color: $fuchsia-text;
+    color: $orange-text;
     font-size: 2em;
     }
 
@@ -121,7 +127,7 @@ a:hover {
 }
 
 .article_title {
-  font-size: 30px;
+  font-size: 1.5em;
 }
 
 #date {
@@ -141,7 +147,7 @@ a:hover {
   width: 80%;
   margin-top: 5em;
   background: none;
-  padding: 20px 40px;
+  padding: 10% 10%;
   border: none;
 }
 
@@ -159,18 +165,18 @@ a:hover {
 .pagination {
   background: white;
   border: 0;
-  text-align: right;
+  text-align: center;
   padding: .5em;
   cursor: default;
   .pagination .current {
-    color: $fuchsia-text;
+    color: $orange-text;
     font-style: normal;
     font-weight: bold;
-    background-color: $orange-text;
+    background-color: $fuchsia-text;
     display: inline-block;
     width: 1em;
     height: 1em;
-    line-height: .85;
+    line-height: 1em;
     text-align: center;
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
@@ -178,8 +184,43 @@ a:hover {
     /*text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; */}
   .pagination a {
     text-decoration: none;
-    color: $orange-text;}
+    color: $fuchsia-text;}
 
 .pagination a:hover, .pagination a:focus {
   text-decoration: underline; }
+}
+
+//****************************
+// *******media queries*******
+//****************************
+@media screen and (min-width: 800px) {
+  nav {
+    font-size: 1.2em;
+    height: 100%;
+    width: 7.5em;
+    padding-right: 0;
+    #wrapper {
+      float: none;
+      text-align: left;
+      margin-top: 20em;
+      width: 5em;
+      div {
+        height: 2em;
+        width: 100%;
+        padding-left: .5em;
+        }
+    }
+  }
+  #header {
+  margin-left: .5em;
+  }
+
+  #container {
+    width: 50%;
+    margin-top: 0em;
+    margin-left: 20%;
+    background: none;
+    padding: 5% 10% 5%;
+    border: none;
+  }
 }
