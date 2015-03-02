@@ -33,18 +33,14 @@ gem 'spring',        group: :development
 # gem 'unicorn'
 
 gem "paperclip"
-
 gem "sorcery"
-
 gem 'will_paginate', '~> 3.0'
-
 gem 'tinymce-rails'
-
 gem 'figaro'
+gem 'haml', '~> 4.0.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
