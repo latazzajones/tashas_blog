@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809000030) do
+ActiveRecord::Schema.define(version: 20151111011533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20140809000030) do
     t.datetime "image_updated_at"
   end
 
+  add_index "articles", ["id"], name: "index_articles_on_id", using: :btree
+
   create_table "authors", force: true do |t|
     t.string   "username",         null: false
     t.string   "email",            null: false
@@ -37,6 +39,28 @@ ActiveRecord::Schema.define(version: 20140809000030) do
   end
 
   add_index "authors", ["email"], name: "index_authors_on_email", unique: true, using: :btree
+
+  create_table "comments", force: true do |t|
+    t.string   "author_name"
+    t.text     "body"
+    t.integer  "article_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["article_id"], name: "index_comments_on_article_id", using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "name",               null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.string   "github_link"
+    t.string   "host_link"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'articles#index'
+  root to: 'projects#index'
   resources :articles do
     resources :comments
   end
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get 'login' => 'author_sessions#new'
     get 'logout' => 'author_sessions#destroy'
 
-  #static 
+  #static
   get "static_pages/about"
   get "static_pages/reading_list"
 
