@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.1.1"
 
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -24,3 +25,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'pry-rails'
 end
+
+
+gem 'unicorn', group: :production
