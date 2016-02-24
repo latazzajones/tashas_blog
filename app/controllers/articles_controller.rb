@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-	include ArticlesHelper
 
 	before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
@@ -46,5 +45,17 @@ class ArticlesController < ApplicationController
 		flash.notice = "Article '#{@article.title}' Updated!"
 
 		redirect_to article_path(@article)
+	end
+
+	private
+
+	def article_params
+		params.require(:article).permit(:title, :body, :tag_list, :image)
+	end
+
+	def markdown(text)
+		renderer = Redcarpet::Render::HTML.new
+		markdown = Redcarpet::Markdown.new(renderer, autolink: true, tables: true, linebreak: true)
+		markdown.render(text)
 	end
 end

@@ -14,7 +14,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem "paperclip"
 gem "sorcery"
 gem 'will_paginate', '~> 3.0'
-gem 'tinymce-rails'
+# gem 'tinymce-rails'
+gem 'redcarpet', '~> 3.3.4'
+gem 'pygments.rb', '~> 0.6.3'
 gem 'figaro'
 gem 'haml', '~> 4.0.5'
 
