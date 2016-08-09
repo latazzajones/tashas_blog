@@ -1,0 +1,19 @@
+textarea {
+  width: 100%;
+  height: 50em
+}
+
+input {
+  width: 100%;
+}
+
+input[type=submit] {
+  width: auto;
+  height: 3em;
+  color: $fuchsia-text;
+}
+
+input[type=file] {
+  width: auto;
+  height: 3em;
+}
